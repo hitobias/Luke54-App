@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="Luke54ProjectLibsHorizontalVariableListViewUnspecified.aar" >
+        <source path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/exploded-bundles/Luke54ProjectLibsHorizontalVariableListViewUnspecified.aar/assets" />
+    </dataSet>
+    <dataSet config="Luke54ProjectLibsActionbarsherlockUnspecified.aar" >
+        <source path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/exploded-bundles/Luke54ProjectLibsActionbarsherlockUnspecified.aar/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/debug/assets" />
+    </dataSet>
+
+</merger>
