@@ -246,6 +246,10 @@ public class MainActivity extends SherlockActivity implements it.sephiroth.andro
                 Intent luke54_facebook_fans_intent = new Intent(MainActivity.this, Luke54FansActivity.class);
                 startActivity(luke54_facebook_fans_intent);
                 break;
+            case R.id.ministry:
+                Intent ministry_of_life_intent = new Intent(MainActivity.this, MinistryOfLifeActivity.class);
+                startActivity(ministry_of_life_intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

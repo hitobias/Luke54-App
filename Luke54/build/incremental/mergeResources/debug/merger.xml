@@ -4484,6 +4484,11 @@ true
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="ministry"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-hdpi/ministry.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/ic_launcher.png"
                 qualifiers="mdpi"
@@ -4491,6 +4496,66 @@ true
             <file
                 name="ic_launcher"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese1"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese1.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese10"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese10.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese11"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese11.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese12"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese12.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese2"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese2.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese3"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese3.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese4"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese4.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese5"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese5.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese6"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese6.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese7"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese7.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese8"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese8.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="moh_chinese9"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/moh_chinese9.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
@@ -4589,6 +4654,11 @@ true
                 qualifiers=""
                 type="layout" />
             <file
+                name="ministry_of_life"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/layout/ministry_of_life.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="photo_item"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/layout/photo_item.xml"
                 qualifiers=""
@@ -4646,6 +4716,11 @@ true
             <file
                 name="main"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/menu/main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="ministry_of_life"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/menu/ministry_of_life.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -5988,6 +6063,8 @@ http://www.luke54.org/components/com_mobileapp/family.json
                 </string>
                 <string name="title_luke54_hot" >水深精選
                 </string>
+                <string name="title_activity_ministry_of_life" >人生的奧秘
+                </string>
                 <string name="luke54_hot_json_url" >http://www.luke54.org/components/com_mobileapp/androidFeatured.json
                 </string>
                 <string name="category" >分類
@@ -6005,6 +6082,8 @@ http://www.luke54.org/components/com_mobileapp/family.json
                 <string name="share" >分享
                 </string>
                 <string name="rhema_words_marriage" >感情·婚姻
+                </string>
+                <string name="ministryOfLife" >人生的奧秘
                 </string>
                 <string name="title_rhema_words" >應時的話
                 </string>

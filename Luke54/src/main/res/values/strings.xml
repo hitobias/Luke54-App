@@ -49,5 +49,7 @@
     <string name="luke54_facebook_fans">水深之處粉絲專頁</string>
     <string name="title_activity_luke54_fans">水深之處粉絲專頁</string>
     <string name="loading">文章加載中...</string>
+    <string name="ministryOfLife">人生的奧秘</string>
+    <string name="title_activity_ministry_of_life">人生的奧秘</string>
 
 </resources>

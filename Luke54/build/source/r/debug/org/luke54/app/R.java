@@ -975,9 +975,22 @@ containing a value of this type.
         public static final int image_ph=0x7f020075;
         public static final int luke54=0x7f020076;
         public static final int main_category=0x7f020077;
+        public static final int ministry=0x7f020078;
+        public static final int moh_chinese1=0x7f020079;
+        public static final int moh_chinese10=0x7f02007a;
+        public static final int moh_chinese11=0x7f02007b;
+        public static final int moh_chinese12=0x7f02007c;
+        public static final int moh_chinese2=0x7f02007d;
+        public static final int moh_chinese3=0x7f02007e;
+        public static final int moh_chinese4=0x7f02007f;
+        public static final int moh_chinese5=0x7f020080;
+        public static final int moh_chinese6=0x7f020081;
+        public static final int moh_chinese7=0x7f020082;
+        public static final int moh_chinese8=0x7f020083;
+        public static final int moh_chinese9=0x7f020084;
     }
     public static final class id {
-        public static final int about_luke54=0x7f070064;
+        public static final int about_luke54=0x7f070065;
         public static final int about_luke54_webview=0x7f070012;
         public static final int abs__action_bar=0x7f070023;
         public static final int abs__action_bar_container=0x7f070022;
@@ -1046,7 +1059,7 @@ containing a value of this type.
         public static final int list=0x7f07003f;
         public static final int listMode=0x7f070003;
         public static final int load_progress=0x7f070035;
-        public static final int luke54_facebook_fans=0x7f070063;
+        public static final int luke54_facebook_fans=0x7f070064;
         public static final int luke54_facebook_fans_webview=0x7f070040;
         public static final int luke54_hot=0x7f07005f;
         public static final int luke54_hot_hlistView=0x7f070046;
@@ -1054,6 +1067,7 @@ containing a value of this type.
         public static final int main_page_hlistView_item_title=0x7f070045;
         public static final int marriage=0x7f07004e;
         public static final int meta=0x7f07003b;
+        public static final int ministry=0x7f070063;
         public static final int name=0x7f07003a;
         public static final int normal=0x7f070001;
         public static final int pbar=0x7f070049;
@@ -1128,12 +1142,13 @@ containing a value of this type.
         public static final int main_page_hlist_view_item=0x7f030024;
         public static final int main_page_luke54_hot_hlist_view=0x7f030025;
         public static final int main_page_rhema_words_hlist_view=0x7f030026;
-        public static final int photo_item=0x7f030027;
-        public static final int rhema_words_activity=0x7f030028;
-        public static final int run_source_activity=0x7f030029;
-        public static final int sherlock_spinner_dropdown_item=0x7f03002a;
-        public static final int sherlock_spinner_item=0x7f03002b;
-        public static final int source_activity=0x7f03002c;
+        public static final int ministry_of_life=0x7f030027;
+        public static final int photo_item=0x7f030028;
+        public static final int rhema_words_activity=0x7f030029;
+        public static final int run_source_activity=0x7f03002a;
+        public static final int sherlock_spinner_dropdown_item=0x7f03002b;
+        public static final int sherlock_spinner_item=0x7f03002c;
+        public static final int source_activity=0x7f03002d;
     }
     public static final class menu {
         public static final int article=0x7f0c0000;
@@ -1144,8 +1159,9 @@ containing a value of this type.
         public static final int luke54_fans=0x7f0c0005;
         public static final int luke54_hot=0x7f0c0006;
         public static final int main=0x7f0c0007;
-        public static final int rhema_words=0x7f0c0008;
-        public static final int run_source=0x7f0c0009;
+        public static final int ministry_of_life=0x7f0c0008;
+        public static final int rhema_words=0x7f0c0009;
+        public static final int run_source=0x7f0c000a;
     }
     public static final class string {
         /**  From: file:/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/values/strings.xml 
@@ -1180,24 +1196,26 @@ containing a value of this type.
         public static final int loading=0x7f0a0017;
         public static final int luke54_facebook_fans=0x7f0a0018;
         public static final int luke54_hot_json_url=0x7f0a0019;
-        public static final int rhema_words_family=0x7f0a001a;
-        public static final int rhema_words_family_json_url=0x7f0a001b;
-        public static final int rhema_words_json_work_url=0x7f0a001c;
-        public static final int rhema_words_marriage=0x7f0a001d;
-        public static final int rhema_words_marriage_json_url=0x7f0a001e;
-        public static final int rhema_words_student=0x7f0a001f;
-        public static final int rhema_words_student_json_url=0x7f0a0020;
-        public static final int rhema_words_worker=0x7f0a0021;
-        public static final int share=0x7f0a0022;
-        public static final int title_activity_favorite_list=0x7f0a0023;
-        public static final int title_activity_image_loading_list=0x7f0a0024;
-        public static final int title_activity_luke54_fans=0x7f0a0025;
-        public static final int title_activity_main=0x7f0a0026;
-        public static final int title_activity_run_source=0x7f0a0027;
-        public static final int title_daily_bible=0x7f0a0028;
-        public static final int title_gospel_articles=0x7f0a0029;
-        public static final int title_luke54_hot=0x7f0a002a;
-        public static final int title_rhema_words=0x7f0a002b;
+        public static final int ministryOfLife=0x7f0a001a;
+        public static final int rhema_words_family=0x7f0a001b;
+        public static final int rhema_words_family_json_url=0x7f0a001c;
+        public static final int rhema_words_json_work_url=0x7f0a001d;
+        public static final int rhema_words_marriage=0x7f0a001e;
+        public static final int rhema_words_marriage_json_url=0x7f0a001f;
+        public static final int rhema_words_student=0x7f0a0020;
+        public static final int rhema_words_student_json_url=0x7f0a0021;
+        public static final int rhema_words_worker=0x7f0a0022;
+        public static final int share=0x7f0a0023;
+        public static final int title_activity_favorite_list=0x7f0a0024;
+        public static final int title_activity_image_loading_list=0x7f0a0025;
+        public static final int title_activity_luke54_fans=0x7f0a0026;
+        public static final int title_activity_main=0x7f0a0027;
+        public static final int title_activity_ministry_of_life=0x7f0a0028;
+        public static final int title_activity_run_source=0x7f0a0029;
+        public static final int title_daily_bible=0x7f0a002a;
+        public static final int title_gospel_articles=0x7f0a002b;
+        public static final int title_luke54_hot=0x7f0a002c;
+        public static final int title_rhema_words=0x7f0a002d;
     }
     public static final class style {
         /**  From: file:/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/values/styles.xml 

@@ -1015,6 +1015,7 @@
     <string name="loading">文章加載中...</string>
     <string name="luke54_facebook_fans">水深之處粉絲專頁</string>
     <string name="luke54_hot_json_url">http://www.luke54.org/components/com_mobileapp/androidFeatured.json</string>
+    <string name="ministryOfLife">人生的奧秘</string>
     <string name="rhema_words_family">家庭·親子</string>
     <string name="rhema_words_family_json_url">http://www.luke54.org/components/com_mobileapp/family.json</string>
     <string name="rhema_words_json_work_url">http://www.luke54.org/components/com_mobileapp/work.json</string>
@@ -1028,6 +1029,7 @@
     <string name="title_activity_image_loading_list">ImageLoadingListActivity</string>
     <string name="title_activity_luke54_fans">水深之處粉絲專頁</string>
     <string name="title_activity_main">水深之處</string>
+    <string name="title_activity_ministry_of_life">人生的奧秘</string>
     <string name="title_activity_run_source">RunSourceActivity</string>
     <string name="title_daily_bible">每日經文</string>
     <string name="title_gospel_articles">福音問答</string>
