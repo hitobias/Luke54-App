@@ -10,6 +10,8 @@ public class MinistryOfLifeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ministry_of_life);
+
+        int[] images = {};
     }
 
 
