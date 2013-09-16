@@ -69,11 +69,11 @@
     </content>
     <orderEntry type="jdk" jdkName="Android 4.2.2 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="actionbarsherlock" exported="" />
+    <orderEntry type="module" module-name="HorizontalVariableListView" exported="" />
     <orderEntry type="library" exported="" name="android-query.0.25.10" level="project" />
     <orderEntry type="library" exported="" name="support-v4-13.0.0" level="project" />
-    <orderEntry type="module" module-name="actionbarsherlock" exported="" />
     <orderEntry type="library" exported="" name="FlurryAgent" level="project" />
-    <orderEntry type="module" module-name="HorizontalVariableListView" exported="" />
   </component>
 </module>
 

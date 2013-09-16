@@ -1807,10 +1807,6 @@ bold
                     parent="@android:style/TextAppearance" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionButton"
-                    parent="Widget.Sherlock.ActionButton" />
-
-                <style
                     name="Widget.Sherlock.Light.ListPopupWindow"
                     parent="Widget" >
                     <item name="android:dropDownSelector">
@@ -1830,11 +1826,9 @@ wrap_content
                     </item>
                 </style>
 
-                <style name="TextAppearance.Sherlock.Light.SearchResult.Title" >
-                    <item name="android:textSize">
-18sp
-                    </item>
-                </style>
+                <style
+                    name="Widget.Sherlock.Light.ActionButton"
+                    parent="Widget.Sherlock.ActionButton" />
 
                 <style
                     name="Widget.Sherlock.TextView.SpinnerItem"
@@ -1847,6 +1841,12 @@ wrap_content
                     </item>
                     <item name="android:paddingRight">
 8dp
+                    </item>
+                </style>
+
+                <style name="TextAppearance.Sherlock.Light.SearchResult.Title" >
+                    <item name="android:textSize">
+18sp
                     </item>
                 </style>
 
@@ -1863,6 +1863,10 @@ wrap_content
 ?android:attr/textColorPrimaryInverse
                     </item>
                 </style>
+
+                <attr
+                    name="subtitleTextStyle"
+                    format="reference" />
 
                 <style
                     name="Theme.Sherlock.Light.DarkActionBar"
@@ -1960,10 +1964,6 @@ wrap_content
 @drawable/abs__ic_commit_search_api_holo_dark
                     </item>
                 </style>
-
-                <attr
-                    name="subtitleTextStyle"
-                    format="reference" />
 
                 <style
                     name="Widget.Sherlock.Light.ProgressBar.Horizontal"
@@ -3352,10 +3352,6 @@ false
                 </string>
 
                 <style
-                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
-                    parent="TextAppearance.Sherlock.Widget.PopupMenu.Large" />
-
-                <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
                     parent="Sherlock.__Widget.SearchAutoCompleteTextView" >
                     <item name="android:dropDownSelector">
@@ -3366,14 +3362,29 @@ false
                     </item>
                 </style>
 
+                <style
+                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
+                    parent="TextAppearance.Sherlock.Widget.PopupMenu.Large" />
+
+                <color name="abs__bright_foreground_disabled_holo_light" >#ffb2b2b2
+                </color>
+
                 <style name="TextAppearance.Sherlock.Widget.PopupMenu.Large" >
                     <item name="android:textSize">
 18sp
                     </item>
                 </style>
 
-                <color name="abs__bright_foreground_disabled_holo_light" >#ffb2b2b2
-                </color>
+                <style
+                    name="TextAppearance.Sherlock.Widget.DropDownHint"
+                    parent="Widget" >
+                    <item name="android:textColor">
+?textColorPrimary
+                    </item>
+                    <item name="android:textSize">
+14sp
+                    </item>
+                </style>
 
                 <style
                     name="Theme.Sherlock"
@@ -3559,17 +3570,6 @@ false
                     </item>
                 </style>
 
-                <style
-                    name="TextAppearance.Sherlock.Widget.DropDownHint"
-                    parent="Widget" >
-                    <item name="android:textColor">
-?textColorPrimary
-                    </item>
-                    <item name="android:textSize">
-14sp
-                    </item>
-                </style>
-
                 <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
 
@@ -3581,6 +3581,14 @@ false
                     </item>
                     <item name="android:textColor">
 ?android:attr/textColorSecondary
+                    </item>
+                </style>
+
+                <style
+                    name="Widget.Sherlock.Spinner.DropDown.ActionBar"
+                    parent="Sherlock.__Widget.Holo.Spinner" >
+                    <item name="android:background">
+@drawable/abs__spinner_ab_holo_dark
                     </item>
                 </style>
 
@@ -3617,14 +3625,6 @@ false
                     </item>
                 </style>
 
-                <style
-                    name="Widget.Sherlock.Spinner.DropDown.ActionBar"
-                    parent="Sherlock.__Widget.Holo.Spinner" >
-                    <item name="android:background">
-@drawable/abs__spinner_ab_holo_dark
-                    </item>
-                </style>
-
                 <bool name="abs__config_actionMenuItemAllCaps" >
 true
                 </bool>
@@ -3640,17 +3640,6 @@ true
                 <style
                     name="TextAppearance.Sherlock.Small"
                     parent="Sherlock.__TextAppearance.Small" />
-
-                <style
-                    name="Sherlock.__Widget.Holo.ListView"
-                    parent="android:Widget.ListView" >
-                    <item name="android:divider">
-@drawable/abs__list_divider_holo_dark
-                    </item>
-                    <item name="android:listSelector">
-@drawable/abs__list_selector_holo_dark
-                    </item>
-                </style>
 
                 <style
                     name="Widget.Sherlock.ActionButton"
@@ -3675,6 +3664,17 @@ center
                     </item>
                     <item name="android:scaleType">
 center
+                    </item>
+                </style>
+
+                <style
+                    name="Sherlock.__Widget.Holo.ListView"
+                    parent="android:Widget.ListView" >
+                    <item name="android:divider">
+@drawable/abs__list_divider_holo_dark
+                    </item>
+                    <item name="android:listSelector">
+@drawable/abs__list_selector_holo_dark
                     </item>
                 </style>
 
@@ -3788,6 +3788,24 @@ marquee
                     type="id"/>
 
                 <style
+                    name="Widget.Sherlock.ProgressBar.Horizontal"
+                    parent="android:Widget.ProgressBar.Horizontal" >
+                    <item name="android:progressDrawable">
+@drawable/abs__progress_horizontal_holo_dark
+                    </item>
+                    <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
+                    <item name="android:minHeight">
+16dip
+                    </item>
+                    <item name="android:maxHeight">
+16dip
+                    </item>
+                </style>
+
+                <string name="abs__action_menu_overflow_description" >More options
+                </string>
+
+                <style
                     name="Sherlock.__Widget.Holo.DropDownItem"
                     parent="Widget" >
                     <item name="android:textAppearance">
@@ -3801,24 +3819,6 @@ marquee
                     </item>
                     <item name="android:gravity">
 center_vertical
-                    </item>
-                </style>
-
-                <string name="abs__action_menu_overflow_description" >More options
-                </string>
-
-                <style
-                    name="Widget.Sherlock.ProgressBar.Horizontal"
-                    parent="android:Widget.ProgressBar.Horizontal" >
-                    <item name="android:progressDrawable">
-@drawable/abs__progress_horizontal_holo_dark
-                    </item>
-                    <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
-                    <item name="android:minHeight">
-16dip
-                    </item>
-                    <item name="android:maxHeight">
-16dip
                     </item>
                 </style>
 
@@ -3870,6 +3870,8 @@ center_vertical
 
                 <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
+                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
+                </dimen>
 
                 <style name="Theme.Sherlock.Light.NoActionBar" >
                     <item name="windowActionBar">
@@ -3879,9 +3881,6 @@ false
 true
                     </item>
                 </style>
-
-                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
-                </dimen>
 
                 <style
                     name="Widget.Sherlock.Light.Button.Small"
@@ -3912,6 +3911,10 @@ normal
                     </item>
                 </style>
 
+                <style
+                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
+                    parent="Sherlock.__Widget.Holo.DropDownItem" />
+
                 <style name="TextAppearance.Sherlock.SearchResult.Subtitle" >
                     <item name="android:textSize">
 14sp
@@ -3920,10 +3923,6 @@ normal
 ?android:attr/textColorSecondary
                     </item>
                 </style>
-
-                <style
-                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
-                    parent="Sherlock.__Widget.Holo.DropDownItem" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionMode.Inverse"
@@ -3965,6 +3964,10 @@ wrap_content
                 </style>
 
                 <style
+                    name="Widget.Sherlock.Light.ActionBar.TabText"
+                    parent="Widget.Sherlock.ActionBar.TabText" />
+
+                <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Title"
                     parent="Widget" >
                     <item name="android:textSize">
@@ -3974,10 +3977,6 @@ wrap_content
 ?android:attr/textColorPrimary
                     </item>
                 </style>
-
-                <style
-                    name="Widget.Sherlock.Light.ActionBar.TabText"
-                    parent="Widget.Sherlock.ActionBar.TabText" />
 
                 <bool name="abs__config_showMenuShortcutsWhenKeyboardPresent" >
 false
@@ -3994,9 +3993,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
-                <dimen name="abs__action_bar_default_height" >40dip
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
+                </dimen>
+                <dimen name="abs__action_bar_default_height" >40dip
                 </dimen>
                 <dimen name="abs__action_bar_title_text_size" >16dp
                 </dimen>
@@ -4014,9 +4013,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >8dip
                 </dimen>
-                <dimen name="abs__action_bar_default_height" >48dip
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
+                </dimen>
+                <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
             </file>
             <file
@@ -4028,9 +4027,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_bottom_margin" >4dip
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >12dp
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_bottom_margin" >4dip
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
@@ -4040,9 +4039,9 @@ false
                 qualifiers="large-land-mdpi-1024x600" >
                 <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
-                <dimen name="abs__action_bar_icon_vertical_padding" >8dip
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
+                <dimen name="abs__action_bar_icon_vertical_padding" >8dip
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
                 </dimen>
@@ -4054,9 +4053,9 @@ false
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/exploded-bundles/Luke54ProjectLibsActionbarsherlockUnspecified.aar/res/values-large-mdpi-1024x600/values.xml"
                 qualifiers="large-mdpi-1024x600" >
-                <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
-                </dimen>
                 <dimen name="abs__action_button_min_width" >64dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
@@ -4089,13 +4088,12 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
 
                 <bool name="abs__action_bar_expanded_action_views_exclusive" >
 false
                 </bool>
-
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
             </file>
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/exploded-bundles/Luke54ProjectLibsActionbarsherlockUnspecified.aar/res/values-v11/values.xml"
@@ -4202,24 +4200,24 @@ false
                     parent="android:Widget.Holo.Spinner" />
 
                 <style
-                    name="TextAppearance.Sherlock.Widget.PopupMenu"
-                    parent="android:TextAppearance.Holo.Widget.PopupMenu" />
-
-                <style
                     name="Widget.Sherlock.ActionBar.TabView"
                     parent="android:Widget.Holo.ActionBar.TabView" />
+
+                <style
+                    name="TextAppearance.Sherlock.Widget.PopupMenu"
+                    parent="android:TextAppearance.Holo.Widget.PopupMenu" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionButton.Overflow"
                     parent="android:Widget.Holo.Light.ActionButton.Overflow" />
 
                 <style
-                    name="Widget.Sherlock.Light.ProgressBar"
-                    parent="android:Widget.Holo.Light.ProgressBar" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar.TabView"
                     parent="android:Widget.Holo.Light.ActionBar.TabView" />
+
+                <style
+                    name="Widget.Sherlock.Light.ProgressBar"
+                    parent="android:Widget.Holo.Light.ProgressBar" />
 
                 <style
                     name="Sherlock.__Theme"
@@ -4352,32 +4350,32 @@ true
                     parent="android:Widget.Holo.ListView.DropDown" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar"
-                    parent="android:Widget.Holo.Light.ActionBar" />
-
-                <style
                     name="Widget.Sherlock.ProgressBar.Horizontal"
                     parent="android:Widget.Holo.ProgressBar.Horizontal" />
+
+                <style
+                    name="Widget.Sherlock.Light.ActionBar"
+                    parent="android:Widget.Holo.Light.ActionBar" />
 
                 <style
                     name="Widget.Sherlock.Light.SearchAutoCompleteTextView"
                     parent="android:Widget.Holo.Light.AutoCompleteTextView" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.Solid"
-                    parent="android:Widget.Holo.Light.ActionBar.Solid" />
-
-                <style
                     name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
                     parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
 
                 <style
-                    name="TextAppearance.Sherlock.Widget.ActionMode.Title"
-                    parent="android:TextAppearance.Holo.Widget.ActionMode.Title" />
+                    name="Widget.Sherlock.Light.ActionBar.Solid"
+                    parent="android:Widget.Holo.Light.ActionBar.Solid" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
                     parent="android:TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+                <style
+                    name="TextAppearance.Sherlock.Widget.ActionMode.Title"
+                    parent="android:TextAppearance.Holo.Widget.ActionMode.Title" />
 
                 <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
@@ -4420,20 +4418,17 @@ true
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/exploded-bundles/Luke54ProjectLibsActionbarsherlockUnspecified.aar/res/values-xlarge/values.xml"
                 qualifiers="xlarge" >
-                <dimen name="abs__action_bar_title_text_size" >18dp
-                </dimen>
-
                 <item
                     name="abs__dialog_min_width_minor"
                     type="dimen">
 72%
                 </item>
 
+                <dimen name="abs__action_bar_title_text_size" >18dp
+                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
                 </dimen>
                 <dimen name="abs__action_button_min_width" >64dip
-                </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
 
                 <item
@@ -4442,17 +4437,29 @@ true
 45%
                 </item>
 
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
+                </dimen>
                 <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
-                <dimen name="abs__action_bar_icon_vertical_padding" >4dip
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
+                <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
             </file>
         </source>
     </dataSet>
     <dataSet config="main" >
         <source path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res" >
+            <file
+                name="slide_in_right"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/anim/slide_in_right.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="slide_out_left"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/anim/slide_out_left.xml"
+                qualifiers=""
+                type="anim" />
             <file
                 name="favorite"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-hdpi/favorite.png"
@@ -4492,6 +4499,151 @@ true
                 name="ic_launcher"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/ic_launcher.png"
                 qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl1"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl1.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl10"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl10.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl11"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl11.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl12"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl12.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl13"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl13.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl14"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl14.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl15"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl15.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl16"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl16.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl17"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl17.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl18"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl18.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl19"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl19.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl2"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl2.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl20"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl20.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl21"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl21.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl3"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl3.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl4"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl4.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl5"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl5.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl6"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl6.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl7"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl7.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl8"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl8.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="mohl9"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-mdpi/mohl9.jpg"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="fttt_moh1"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/fttt_moh1.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="fttt_moh2"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/fttt_moh2.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="fttt_moh3"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/fttt_moh3.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="fttt_moh4"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/fttt_moh4.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="fttt_moh5"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/fttt_moh5.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="fttt_moh6"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/fttt_moh6.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="fttt_moh7"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/fttt_moh7.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="fttt_moh8"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-xhdpi/fttt_moh8.png"
+                qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="ic_launcher"
@@ -4599,6 +4751,11 @@ true
                 qualifiers=""
                 type="layout" />
             <file
+                name="fttt_moh"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/layout/fttt_moh.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="gospel_articles_activity"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/layout/gospel_articles_activity.xml"
                 qualifiers=""
@@ -4691,6 +4848,11 @@ true
             <file
                 name="favorite_list"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/menu/favorite_list.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="ftttmoh"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/menu/ftttmoh.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -5671,11 +5833,6 @@ Invalidate
 Doc @ AndroidQuery
                     </item>
                 </string-array>
-                <string-array name="location_names" >
-                    <item>
-Optimal Location Callbacks
-                    </item>
-                </string-array>
                 <string-array name="locales" >
                     <item>
 en
@@ -5730,6 +5887,11 @@ da
                     </item>
                     <item>
 fi
+                    </item>
+                </string-array>
+                <string-array name="location_names" >
+                    <item>
+Optimal Location Callbacks
                     </item>
                 </string-array>
                 <string-array name="image_values" >
@@ -5988,19 +6150,23 @@ Doc @ AndroidQuery
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="action_settings" >Settings
+                <string name="title_activity_ftttmoh" >人生的奧秘
                 </string>
                 <string name="advice" >反饋建議
                 </string>
-                <string name="title_activity_main" >水深之處
+                <string name="action_settings" >Settings
                 </string>
                 <string name="title_gospel_articles" >福音問答
                 </string>
+                <string name="title_activity_main" >水深之處
+                </string>
                 <string name="rhema_words_marriage_json_url" >http://www.luke54.org/components/com_mobileapp/marriage.json
                 </string>
-                <string name="rhema_words_student_json_url" >http://www.luke54.org/components/com_mobileapp/student.json
+                <string name="luke54_moh" >人生的奧秘卡通版
                 </string>
                 <string name="title_daily_bible" >每日經文
+                </string>
+                <string name="rhema_words_student_json_url" >http://www.luke54.org/components/com_mobileapp/student.json
                 </string>
                 <string name="rhema_words_worker" >上班族
                 </string>
@@ -6071,9 +6237,13 @@ http://www.luke54.org/components/com_mobileapp/family.json
                 </string>
                 <string name="copyright" >水深之處 © 2010~2013
                 </string>
-                <string name="rhema_words_family" >家庭·親子
+                <string name="add_contact" >添加聯系人
                 </string>
                 <string name="luke54_facebook_fans" >水深之處粉絲專頁
+                </string>
+                <string name="rhema_words_family" >家庭·親子
+                </string>
+                <string name="fttt_moh" >人生的奧秘傳講版
                 </string>
                 <string name="app_name" >水深之處
                 </string>
@@ -6085,14 +6255,20 @@ http://www.luke54.org/components/com_mobileapp/family.json
                 </string>
                 <string name="ministryOfLife" >人生的奧秘
                 </string>
-                <string name="title_rhema_words" >應時的話
-                </string>
                 <string name="title_activity_luke54_fans" >水深之處粉絲專頁
+                </string>
+                <string name="title_rhema_words" >應時的話
                 </string>
             </file>
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/values/styles.xml"
                 qualifiers="" >
+
+                <style name="GalleryItem" >
+                    <item name="android:background">
+?android:attr/galleryItemBackground
+                    </item>
+                </style>
 
                 <style
                     name="Widget.MyTabText"
@@ -6102,12 +6278,6 @@ http://www.luke54.org/components/com_mobileapp/family.json
                     </item>
                     <item name="android:textColor">
 #ffd2e4cd
-                    </item>
-                </style>
-
-                <style name="GalleryItem" >
-                    <item name="android:background">
-?android:attr/galleryItemBackground
                     </item>
                 </style>
 
@@ -6165,6 +6335,11 @@ http://www.luke54.org/components/com_mobileapp/family.json
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="add_contact"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-hdpi/add_contact.png"
+                qualifiers="hdpi"
+                type="drawable" />
         </source>
         <source path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/res/rs/debug" />
     </dataSet>

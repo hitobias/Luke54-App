@@ -7,17 +7,17 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
+
 import android.os.Build;
 import android.os.Bundle;
 
-import android.util.Log;
+
 import android.view.ActionMode;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
+
 import android.widget.AbsListView;
-import android.widget.AdapterView;
+
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -246,9 +246,13 @@ public class MainActivity extends SherlockActivity implements it.sephiroth.andro
                 Intent luke54_facebook_fans_intent = new Intent(MainActivity.this, Luke54FansActivity.class);
                 startActivity(luke54_facebook_fans_intent);
                 break;
-            case R.id.ministry:
-                Intent ministry_of_life_intent = new Intent(MainActivity.this, MinistryOfLifeActivity.class);
-                startActivity(ministry_of_life_intent);
+            case R.id.luke54_moh:
+                Intent luke54_moh_intent = new Intent(MainActivity.this, MinistryOfLifeActivity.class);
+                startActivity(luke54_moh_intent);
+                break;
+            case R.id.fttt_moh:
+                Intent fttt_moh_intent = new Intent(MainActivity.this, FTTTMOHActivity.class);
+                startActivity(fttt_moh_intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
