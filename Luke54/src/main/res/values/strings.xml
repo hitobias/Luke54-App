@@ -51,5 +51,9 @@
     <string name="loading">文章加載中...</string>
     <string name="ministryOfLife">人生的奧秘</string>
     <string name="title_activity_ministry_of_life">人生的奧秘</string>
+    <string name="title_activity_ftttmoh">人生的奧秘</string>
+    <string name="luke54_moh">人生的奧秘卡通版</string>
+    <string name="fttt_moh">人生的奧秘傳講版</string>
+    <string name="add_contact">添加聯系人</string>
 
 </resources>

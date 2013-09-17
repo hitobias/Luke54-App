@@ -22,13 +22,13 @@ public final class R {
 		public static final int transcriptMode = 0x7f01000b;
 	}
 	public static final class drawable {
-		public static final int hlv_overscroll_edge = 0x7f020071;
-		public static final int hlv_overscroll_glow = 0x7f020072;
+		public static final int hlv_overscroll_edge = 0x7f02007a;
+		public static final int hlv_overscroll_glow = 0x7f02007b;
 	}
 	public static final class id {
-		public static final int alwaysScroll = 0x7f070002;
-		public static final int disabled = 0x7f070000;
-		public static final int normal = 0x7f070001;
+		public static final int alwaysScroll = 0x7f080002;
+		public static final int disabled = 0x7f080000;
+		public static final int normal = 0x7f080001;
 	}
 	public static final class styleable {
 		public static final int[] AbsHListView = { 0x010100fb, 0x010100fc, 0x010100fe, 0x01010101, 0x0101012b, 0x01010231, 0x7f01000a, 0x7f01000b };
