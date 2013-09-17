@@ -1807,6 +1807,10 @@ bold
                     parent="@android:style/TextAppearance" />
 
                 <style
+                    name="Widget.Sherlock.Light.ActionButton"
+                    parent="Widget.Sherlock.ActionButton" />
+
+                <style
                     name="Widget.Sherlock.Light.ListPopupWindow"
                     parent="Widget" >
                     <item name="android:dropDownSelector">
@@ -1826,9 +1830,11 @@ wrap_content
                     </item>
                 </style>
 
-                <style
-                    name="Widget.Sherlock.Light.ActionButton"
-                    parent="Widget.Sherlock.ActionButton" />
+                <style name="TextAppearance.Sherlock.Light.SearchResult.Title" >
+                    <item name="android:textSize">
+18sp
+                    </item>
+                </style>
 
                 <style
                     name="Widget.Sherlock.TextView.SpinnerItem"
@@ -1841,12 +1847,6 @@ wrap_content
                     </item>
                     <item name="android:paddingRight">
 8dp
-                    </item>
-                </style>
-
-                <style name="TextAppearance.Sherlock.Light.SearchResult.Title" >
-                    <item name="android:textSize">
-18sp
                     </item>
                 </style>
 
@@ -1863,10 +1863,6 @@ wrap_content
 ?android:attr/textColorPrimaryInverse
                     </item>
                 </style>
-
-                <attr
-                    name="subtitleTextStyle"
-                    format="reference" />
 
                 <style
                     name="Theme.Sherlock.Light.DarkActionBar"
@@ -1964,6 +1960,10 @@ wrap_content
 @drawable/abs__ic_commit_search_api_holo_dark
                     </item>
                 </style>
+
+                <attr
+                    name="subtitleTextStyle"
+                    format="reference" />
 
                 <style
                     name="Widget.Sherlock.Light.ProgressBar.Horizontal"
@@ -3352,6 +3352,10 @@ false
                 </string>
 
                 <style
+                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
+                    parent="TextAppearance.Sherlock.Widget.PopupMenu.Large" />
+
+                <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
                     parent="Sherlock.__Widget.SearchAutoCompleteTextView" >
                     <item name="android:dropDownSelector">
@@ -3362,29 +3366,14 @@ false
                     </item>
                 </style>
 
-                <style
-                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
-                    parent="TextAppearance.Sherlock.Widget.PopupMenu.Large" />
-
-                <color name="abs__bright_foreground_disabled_holo_light" >#ffb2b2b2
-                </color>
-
                 <style name="TextAppearance.Sherlock.Widget.PopupMenu.Large" >
                     <item name="android:textSize">
 18sp
                     </item>
                 </style>
 
-                <style
-                    name="TextAppearance.Sherlock.Widget.DropDownHint"
-                    parent="Widget" >
-                    <item name="android:textColor">
-?textColorPrimary
-                    </item>
-                    <item name="android:textSize">
-14sp
-                    </item>
-                </style>
+                <color name="abs__bright_foreground_disabled_holo_light" >#ffb2b2b2
+                </color>
 
                 <style
                     name="Theme.Sherlock"
@@ -3570,6 +3559,17 @@ false
                     </item>
                 </style>
 
+                <style
+                    name="TextAppearance.Sherlock.Widget.DropDownHint"
+                    parent="Widget" >
+                    <item name="android:textColor">
+?textColorPrimary
+                    </item>
+                    <item name="android:textSize">
+14sp
+                    </item>
+                </style>
+
                 <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
 
@@ -3581,14 +3581,6 @@ false
                     </item>
                     <item name="android:textColor">
 ?android:attr/textColorSecondary
-                    </item>
-                </style>
-
-                <style
-                    name="Widget.Sherlock.Spinner.DropDown.ActionBar"
-                    parent="Sherlock.__Widget.Holo.Spinner" >
-                    <item name="android:background">
-@drawable/abs__spinner_ab_holo_dark
                     </item>
                 </style>
 
@@ -3625,6 +3617,14 @@ false
                     </item>
                 </style>
 
+                <style
+                    name="Widget.Sherlock.Spinner.DropDown.ActionBar"
+                    parent="Sherlock.__Widget.Holo.Spinner" >
+                    <item name="android:background">
+@drawable/abs__spinner_ab_holo_dark
+                    </item>
+                </style>
+
                 <bool name="abs__config_actionMenuItemAllCaps" >
 true
                 </bool>
@@ -3640,6 +3640,17 @@ true
                 <style
                     name="TextAppearance.Sherlock.Small"
                     parent="Sherlock.__TextAppearance.Small" />
+
+                <style
+                    name="Sherlock.__Widget.Holo.ListView"
+                    parent="android:Widget.ListView" >
+                    <item name="android:divider">
+@drawable/abs__list_divider_holo_dark
+                    </item>
+                    <item name="android:listSelector">
+@drawable/abs__list_selector_holo_dark
+                    </item>
+                </style>
 
                 <style
                     name="Widget.Sherlock.ActionButton"
@@ -3664,17 +3675,6 @@ center
                     </item>
                     <item name="android:scaleType">
 center
-                    </item>
-                </style>
-
-                <style
-                    name="Sherlock.__Widget.Holo.ListView"
-                    parent="android:Widget.ListView" >
-                    <item name="android:divider">
-@drawable/abs__list_divider_holo_dark
-                    </item>
-                    <item name="android:listSelector">
-@drawable/abs__list_selector_holo_dark
                     </item>
                 </style>
 
@@ -3788,24 +3788,6 @@ marquee
                     type="id"/>
 
                 <style
-                    name="Widget.Sherlock.ProgressBar.Horizontal"
-                    parent="android:Widget.ProgressBar.Horizontal" >
-                    <item name="android:progressDrawable">
-@drawable/abs__progress_horizontal_holo_dark
-                    </item>
-                    <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
-                    <item name="android:minHeight">
-16dip
-                    </item>
-                    <item name="android:maxHeight">
-16dip
-                    </item>
-                </style>
-
-                <string name="abs__action_menu_overflow_description" >More options
-                </string>
-
-                <style
                     name="Sherlock.__Widget.Holo.DropDownItem"
                     parent="Widget" >
                     <item name="android:textAppearance">
@@ -3819,6 +3801,24 @@ marquee
                     </item>
                     <item name="android:gravity">
 center_vertical
+                    </item>
+                </style>
+
+                <string name="abs__action_menu_overflow_description" >More options
+                </string>
+
+                <style
+                    name="Widget.Sherlock.ProgressBar.Horizontal"
+                    parent="android:Widget.ProgressBar.Horizontal" >
+                    <item name="android:progressDrawable">
+@drawable/abs__progress_horizontal_holo_dark
+                    </item>
+                    <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
+                    <item name="android:minHeight">
+16dip
+                    </item>
+                    <item name="android:maxHeight">
+16dip
                     </item>
                 </style>
 
@@ -3870,8 +3870,6 @@ center_vertical
 
                 <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
-                </dimen>
 
                 <style name="Theme.Sherlock.Light.NoActionBar" >
                     <item name="windowActionBar">
@@ -3881,6 +3879,9 @@ false
 true
                     </item>
                 </style>
+
+                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
+                </dimen>
 
                 <style
                     name="Widget.Sherlock.Light.Button.Small"
@@ -3911,10 +3912,6 @@ normal
                     </item>
                 </style>
 
-                <style
-                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
-                    parent="Sherlock.__Widget.Holo.DropDownItem" />
-
                 <style name="TextAppearance.Sherlock.SearchResult.Subtitle" >
                     <item name="android:textSize">
 14sp
@@ -3923,6 +3920,10 @@ normal
 ?android:attr/textColorSecondary
                     </item>
                 </style>
+
+                <style
+                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
+                    parent="Sherlock.__Widget.Holo.DropDownItem" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionMode.Inverse"
@@ -3964,10 +3965,6 @@ wrap_content
                 </style>
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.TabText"
-                    parent="Widget.Sherlock.ActionBar.TabText" />
-
-                <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Title"
                     parent="Widget" >
                     <item name="android:textSize">
@@ -3977,6 +3974,10 @@ wrap_content
 ?android:attr/textColorPrimary
                     </item>
                 </style>
+
+                <style
+                    name="Widget.Sherlock.Light.ActionBar.TabText"
+                    parent="Widget.Sherlock.ActionBar.TabText" />
 
                 <bool name="abs__config_showMenuShortcutsWhenKeyboardPresent" >
 false
@@ -3993,9 +3994,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >40dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
                 <dimen name="abs__action_bar_title_text_size" >16dp
                 </dimen>
@@ -4013,9 +4014,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >8dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >48dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
             </file>
             <file
@@ -4027,9 +4028,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >12dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >4dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
@@ -4039,9 +4040,9 @@ false
                 qualifiers="large-land-mdpi-1024x600" >
                 <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >8dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
                 </dimen>
@@ -4053,9 +4054,9 @@ false
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/exploded-bundles/Luke54ProjectLibsActionbarsherlockUnspecified.aar/res/values-large-mdpi-1024x600/values.xml"
                 qualifiers="large-mdpi-1024x600" >
-                <dimen name="abs__action_button_min_width" >64dip
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
+                </dimen>
+                <dimen name="abs__action_button_min_width" >64dip
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
@@ -4088,12 +4089,13 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
 
                 <bool name="abs__action_bar_expanded_action_views_exclusive" >
 false
                 </bool>
+
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
             </file>
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/exploded-bundles/Luke54ProjectLibsActionbarsherlockUnspecified.aar/res/values-v11/values.xml"
@@ -4200,24 +4202,24 @@ false
                     parent="android:Widget.Holo.Spinner" />
 
                 <style
-                    name="Widget.Sherlock.ActionBar.TabView"
-                    parent="android:Widget.Holo.ActionBar.TabView" />
-
-                <style
                     name="TextAppearance.Sherlock.Widget.PopupMenu"
                     parent="android:TextAppearance.Holo.Widget.PopupMenu" />
+
+                <style
+                    name="Widget.Sherlock.ActionBar.TabView"
+                    parent="android:Widget.Holo.ActionBar.TabView" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionButton.Overflow"
                     parent="android:Widget.Holo.Light.ActionButton.Overflow" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.TabView"
-                    parent="android:Widget.Holo.Light.ActionBar.TabView" />
-
-                <style
                     name="Widget.Sherlock.Light.ProgressBar"
                     parent="android:Widget.Holo.Light.ProgressBar" />
+
+                <style
+                    name="Widget.Sherlock.Light.ActionBar.TabView"
+                    parent="android:Widget.Holo.Light.ActionBar.TabView" />
 
                 <style
                     name="Sherlock.__Theme"
@@ -4350,32 +4352,32 @@ true
                     parent="android:Widget.Holo.ListView.DropDown" />
 
                 <style
-                    name="Widget.Sherlock.ProgressBar.Horizontal"
-                    parent="android:Widget.Holo.ProgressBar.Horizontal" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar"
                     parent="android:Widget.Holo.Light.ActionBar" />
+
+                <style
+                    name="Widget.Sherlock.ProgressBar.Horizontal"
+                    parent="android:Widget.Holo.ProgressBar.Horizontal" />
 
                 <style
                     name="Widget.Sherlock.Light.SearchAutoCompleteTextView"
                     parent="android:Widget.Holo.Light.AutoCompleteTextView" />
 
                 <style
-                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
-                    parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar.Solid"
                     parent="android:Widget.Holo.Light.ActionBar.Solid" />
 
                 <style
-                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
-                    parent="android:TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
+                    parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Title"
                     parent="android:TextAppearance.Holo.Widget.ActionMode.Title" />
+
+                <style
+                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
+                    parent="android:TextAppearance.Holo.Widget.ActionBar.Subtitle" />
 
                 <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
@@ -4418,17 +4420,20 @@ true
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/build/exploded-bundles/Luke54ProjectLibsActionbarsherlockUnspecified.aar/res/values-xlarge/values.xml"
                 qualifiers="xlarge" >
+                <dimen name="abs__action_bar_title_text_size" >18dp
+                </dimen>
+
                 <item
                     name="abs__dialog_min_width_minor"
                     type="dimen">
 72%
                 </item>
 
-                <dimen name="abs__action_bar_title_text_size" >18dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
                 </dimen>
                 <dimen name="abs__action_button_min_width" >64dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
 
                 <item
@@ -4437,13 +4442,11 @@ true
 45%
                 </item>
 
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
                 </dimen>
             </file>
         </source>
@@ -4468,11 +4471,6 @@ true
             <file
                 name="ic_launcher"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-hdpi/ic_launcher.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="image_missing"
-                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-hdpi/image_missing.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -5833,6 +5831,11 @@ Invalidate
 Doc @ AndroidQuery
                     </item>
                 </string-array>
+                <string-array name="location_names" >
+                    <item>
+Optimal Location Callbacks
+                    </item>
+                </string-array>
                 <string-array name="locales" >
                     <item>
 en
@@ -5887,11 +5890,6 @@ da
                     </item>
                     <item>
 fi
-                    </item>
-                </string-array>
-                <string-array name="location_names" >
-                    <item>
-Optimal Location Callbacks
                     </item>
                 </string-array>
                 <string-array name="image_values" >
@@ -6152,21 +6150,21 @@ Doc @ AndroidQuery
                 qualifiers="" >
                 <string name="title_activity_ftttmoh" >人生的奧秘
                 </string>
-                <string name="advice" >反饋建議
-                </string>
                 <string name="action_settings" >Settings
                 </string>
-                <string name="title_gospel_articles" >福音問答
+                <string name="advice" >反饋建議
                 </string>
                 <string name="title_activity_main" >水深之處
                 </string>
+                <string name="title_gospel_articles" >福音問答
+                </string>
                 <string name="rhema_words_marriage_json_url" >http://www.luke54.org/components/com_mobileapp/marriage.json
                 </string>
-                <string name="luke54_moh" >人生的奧秘卡通版
+                <string name="rhema_words_student_json_url" >http://www.luke54.org/components/com_mobileapp/student.json
                 </string>
                 <string name="title_daily_bible" >每日經文
                 </string>
-                <string name="rhema_words_student_json_url" >http://www.luke54.org/components/com_mobileapp/student.json
+                <string name="luke54_moh" >人生的奧秘卡通版
                 </string>
                 <string name="rhema_words_worker" >上班族
                 </string>
@@ -6229,9 +6227,9 @@ http://www.luke54.org/components/com_mobileapp/family.json
                 </string>
                 <string name="title_luke54_hot" >水深精選
                 </string>
-                <string name="title_activity_ministry_of_life" >人生的奧秘
-                </string>
                 <string name="luke54_hot_json_url" >http://www.luke54.org/components/com_mobileapp/androidFeatured.json
+                </string>
+                <string name="title_activity_ministry_of_life" >人生的奧秘
                 </string>
                 <string name="category" >分類
                 </string>
@@ -6239,9 +6237,9 @@ http://www.luke54.org/components/com_mobileapp/family.json
                 </string>
                 <string name="add_contact" >添加聯系人
                 </string>
-                <string name="luke54_facebook_fans" >水深之處粉絲專頁
-                </string>
                 <string name="rhema_words_family" >家庭·親子
+                </string>
+                <string name="luke54_facebook_fans" >水深之處粉絲專頁
                 </string>
                 <string name="fttt_moh" >人生的奧秘傳講版
                 </string>
@@ -6255,20 +6253,14 @@ http://www.luke54.org/components/com_mobileapp/family.json
                 </string>
                 <string name="ministryOfLife" >人生的奧秘
                 </string>
-                <string name="title_activity_luke54_fans" >水深之處粉絲專頁
-                </string>
                 <string name="title_rhema_words" >應時的話
+                </string>
+                <string name="title_activity_luke54_fans" >水深之處粉絲專頁
                 </string>
             </file>
             <file
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/values/styles.xml"
                 qualifiers="" >
-
-                <style name="GalleryItem" >
-                    <item name="android:background">
-?android:attr/galleryItemBackground
-                    </item>
-                </style>
 
                 <style
                     name="Widget.MyTabText"
@@ -6278,6 +6270,12 @@ http://www.luke54.org/components/com_mobileapp/family.json
                     </item>
                     <item name="android:textColor">
 #ffd2e4cd
+                    </item>
+                </style>
+
+                <style name="GalleryItem" >
+                    <item name="android:background">
+?android:attr/galleryItemBackground
                     </item>
                 </style>
 
@@ -6338,6 +6336,11 @@ http://www.luke54.org/components/com_mobileapp/family.json
             <file
                 name="add_contact"
                 path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-hdpi/add_contact.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="image_missing"
+                path="/Users/hitobias/AndroidStudioProjects/Luke54Project/Luke54/src/main/res/drawable-hdpi/image_missing.png"
                 qualifiers="hdpi"
                 type="drawable" />
         </source>
